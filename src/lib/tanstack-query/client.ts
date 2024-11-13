@@ -7,6 +7,7 @@ function makeQueryClient() {
     defaultOptions: {
       queries: {
         staleTime: defaultStaleTime,
+        refetchOnWindowFocus: false,
       },
     },
     queryCache: new QueryCache({}),
