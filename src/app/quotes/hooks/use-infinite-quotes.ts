@@ -19,9 +19,9 @@ export const useInfiniteQuotes = () => {
     getNextPageParam: (lastPage, allPages) => {
       //lastPage : 현재 요청한 api 결과값
       //allPages : 지금까지 요청한 api의 결과값이 배열로 저장
-      return lastPage.quotes.length ? allPages.length + 1 : undefined //api에서 값이 없을 경우 빈배열로 오기 때문에 lastPage.quotes.length로 판단
+      return lastPage.quotes.length ? allPages.length : undefined //api에서 값이 없을 경우 빈배열로 오기 때문에 lastPage.quotes.length로 판단
     },
   })
-
+  console.log(data)
   return { data, fetchNextPage, error, hasNextPage }
 }
