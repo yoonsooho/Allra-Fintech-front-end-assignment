@@ -22,6 +22,5 @@ export const useInfiniteQuotes = () => {
       return lastPage.quotes.length ? allPages.length : undefined //api에서 값이 없을 경우 빈배열로 오기 때문에 lastPage.quotes.length로 판단
     },
   })
-  console.log(data)
   return { data, fetchNextPage, error, hasNextPage }
 }
